@@ -32,7 +32,8 @@ SOURCES += \
     nodeitem.cpp \
     minheap.cpp \
     treeline.cpp \
-    treedialog.cpp
+    treedialog.cpp \
+    historydialog.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -41,11 +42,14 @@ HEADERS += \
     nodeitem.h \
     minheap.h \
     treeline.h \
-    treedialog.h
+    treedialog.h \
+    huffmantree.h \
+    historydialog.h
 
 FORMS += \
         mainwindow.ui \
-    treedialog.ui
+    treedialog.ui \
+    historydialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

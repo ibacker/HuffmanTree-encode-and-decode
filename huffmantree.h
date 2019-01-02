@@ -1,3 +1,5 @@
+#ifndef HUFFMANTREE_H
+#define HUFFMANTREE_H
 //#program once
 #ifndef M_H
 #define M_H
@@ -126,3 +128,5 @@ public:
 //}
 
 #endif
+
+#endif // HUFFMANTREE_H

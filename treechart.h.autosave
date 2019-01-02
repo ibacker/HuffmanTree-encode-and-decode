@@ -1,0 +1,33 @@
+#ifndef TREECHART_H
+#define TREECHART_H
+
+#include <QDialog>
+#include <QGraphicsScene>
+#include <QGraphicsLineItem>
+#include "nodeitem.h"
+#include "treescene.h"
+
+namespace Ui {
+class TreeChart;
+}
+
+class TreeChart : public QDialog
+{
+    Q_OBJECT
+
+public:
+    void Next();
+    explicit TreeChart(int *weight,int num,QWidget *parent = 0);
+    ~TreeChart();
+
+private slots:
+    void on_pushButton_clicked();
+
+    void on_pushButton_2_clicked();
+
+private:
+    Ui::TreeChart *ui;
+    TreeScene *treeScene;
+};
+
+#endif // TREECHART_H

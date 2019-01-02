@@ -1,0 +1,37 @@
+#include "treechart.h"
+#include "ui_treechart.h"
+#include <QPropertyAnimation>
+#include <QDebug>
+TreeChart::TreeChart(int *weight,int num,QWidget *parent) :
+    QDialog(parent),
+    ui(new Ui::treechart)
+{
+    ui->setupUi(this);
+    treeScene = new TreeScene(weight,num);
+    ui->graphicsView->setScene(treeScene);
+
+}
+
+TreeChart::~TreeChart()
+{
+    delete ui;
+}
+void TreeChart::Next()
+{
+
+    treeScene->createTree();
+}
+
+
+
+
+
+void TreeChart::on_pushButton_clicked()
+{
+    Next();
+}
+
+void TreeChart::on_pushButton_2_clicked()
+{
+    this->close();
+}
